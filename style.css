@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-botao) ;
+}
+
+body{
+    /*DECLARANDO VAIRAVEIS DAS CORES*/
+    --background: #fafafa; 
+    --white: #ffffff;
+    --black: #000000;
+    --cor-botao: #0095f6;
+    --cor-link:var(--cor-botao); 
+    --cor-borda: #e6e6e6;
+
+
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* INICIO CONTAINER TODO*/
+#area-toda{
+    height: 100vh;
+}
+
+#container{
+    margin: 0 auto;
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.column{
+    flex-grow:1;
+    width: 50%;
+}
+
+.left{
+    background-image: url(imagens/main-foto.png);
+    height: 600px;
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right{
+    padding-left: 20px;
+}
+/* FINAL CONTAINER TODO */
+
+
+/* INICIO LADO DIREITO  */
+.login-painel{
+    background-color: var(--background);
+    border: 1px solid var(--cor-borda);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-img{
+    width: 175px;
+}
+
+.login-painel form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="password"],input[type="text"]  {
+    background-color: var(--background);
+    border: 1px solid var(--cor-borda);
+    height: 40px;
+    width: 320px;
+    margin-top: 12px;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+input[type="password"]::placeholder, input[type="text"]::placeholder{
+    color: #a5a4a4;
+}   
+
+input[type="password"]:focus, input[type="text"]:focus{
+    outline: 0;
+    border: 1px solid var(--cor-borda);
+} 
+
+input[type="submit"]{
+    width: 320px;
+    margin-top: 12px;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-botao);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10PX;
+    cursor: pointer;
+}
+
+.info-box{
+    background-color: var(--background);
+    border: 1px solid var(--cor-borda);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+.info-box a{
+    padding-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.app-box p{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.fotos-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotos-app img{
+    width: 150px;
+    margin-left: 10px;
+}
+/* FIM LADO DIREITO */
+
+/*INICIO RODAPE */
+footer{
+    text-align: center;
+    height: 50px;
+}
+
+.footer-box a{ 
+    color: var(--white);
+    margin-left: 25px;
+}
+
+.texto-p{
+    color: var(--white);
+    margin-top: 15px;
+}
+/* FIM FOOTER */
+
+
+/* INICIO PAGINA CADASTRE-SE */
+#container-cadastre-se{
+    margin:0 auto;
+    min-height: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.msg{
+    margin: 10px 70px;
+}
+
+.msg span{
+    text-align: center;
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--cor-botao);
+}
+
+.botao-entrarface{
+    height: 35px;
+    width: 320px;
+    border: none;
+    background-color: var(--cor-botao);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.divisor-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.linha{
+    height: 1px;
+    background-color: var(--background);
+    width: 35%;
+}
+
+.ou{
+    font-weight: bold;
+    margin: 0 2.5%;
+    color: #e6e6e6;
+}
+/* FIM PAGINA CADASTRE-SE */
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px){
+    .left{
+        display: none;
+    }
+
+    #container{
+        width: 70%;
+    }
+
+    .right{
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width: 560px){
+    #container{
+        width: 90%;
+    }
+
+    input[type="password"],input[type="text"], input[type="submit"] {
+        width: 85%;
+    }
+
+}
+
